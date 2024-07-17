@@ -11,8 +11,10 @@ spec:
     targetRevision: 2.16.0
     helm:
       releaseName: sealed-secrets
-      valueFiles:
-        - values.yaml
+      parameters:
+        - name: commonLabels
+          value: 
+            mykey: myvalue
   destination:
     server: "https://kubernetes.default.svc"
     namespace: kubeseal
