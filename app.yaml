@@ -12,9 +12,8 @@ spec:
     helm:
       releaseName: sealed-secrets
       parameters:
-        - name: commonLabels
-          value: 
-            mykey: myvalue
+        - name: nameOverride
+          value: overriden
   destination:
     server: "https://kubernetes.default.svc"
     namespace: kubeseal
