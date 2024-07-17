@@ -1,1 +1,2 @@
-nameOverride: overriden
+commonLabels:
+  mykey: myvalue
