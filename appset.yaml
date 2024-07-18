@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: podinfo
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - list:
+      elements:
+        - name: abc
+        - name: xyz
+  template:
+    metadata:
+      name: '{{.name}}-podinfo'
+    spec:
+      project: podinfo
+      source:
+        repoURL: https://github.com/stefanprodan/podinfo.git
+        targetRevision: HEAD
+        path: charts/podinfo
+      destination:
+        server: "https://kubernetes.default.svc"
+        namespace: default
