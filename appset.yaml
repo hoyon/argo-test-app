@@ -10,7 +10,9 @@ spec:
   - list:
       elements:
         - name: abc
+          replicaCount: 1
         - name: xyz
+          replicaCount: 3
   template:
     metadata:
       name: '{{.name}}-podinfo'
@@ -20,6 +22,10 @@ spec:
         repoURL: https://github.com/stefanprodan/podinfo.git
         targetRevision: HEAD
         path: charts/podinfo
+        helm:
+          parameters:
+            - name: replicaCount
+              value: '{{.replicaCount}}'
       destination:
         server: "https://kubernetes.default.svc"
         namespace: default
