@@ -10,9 +10,9 @@ spec:
   - list:
       elements:
         - name: abc
-          replicaCount: 1
+          replicaCount: 2
         - name: xyz
-          replicaCount: 3
+          replicaCount: 5
   template:
     metadata:
       name: '{{.name}}-podinfo'
