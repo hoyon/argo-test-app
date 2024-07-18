@@ -15,7 +15,7 @@ spec:
     metadata:
       name: '{{.name}}-podinfo'
     spec:
-      project: podinfo
+      project: default
       source:
         repoURL: https://github.com/stefanprodan/podinfo.git
         targetRevision: HEAD
