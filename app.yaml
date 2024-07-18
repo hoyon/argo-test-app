@@ -13,7 +13,7 @@ spec:
       releaseName: sealed-secrets
       parameters:
         - name: nameOverride
-          value: abcde
+          value: pedro
   destination:
     server: "https://kubernetes.default.svc"
     namespace: kubeseal
