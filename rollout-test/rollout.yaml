@@ -8,7 +8,7 @@ spec:
     blueGreen:
       activeService: rollout-test-active
       previewService: rollout-test-preview
-      autoPromotionEnabled: true
+      autoPromotionEnabled: false
   selector:
     matchLabels:
       app: rollout-test
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: argoproj/rollouts-demo:green
+        image: argoproj/rollouts-demo:purple
         ports:
         - name: http
           containerPort: 8080
