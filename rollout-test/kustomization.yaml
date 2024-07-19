@@ -1,0 +1,4 @@
+resources:
+- rollout.yaml
+- active-service.yaml
+- preview-service.yaml
