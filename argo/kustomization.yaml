@@ -4,5 +4,5 @@ resources:
 # - clusters-secrets.yaml
 # - repos-secrets.yaml
 
-# patches:
-# - path: overlays/argo-cd-cm.yaml
+patches:
+- path: overlays/argocd-cm.yaml
