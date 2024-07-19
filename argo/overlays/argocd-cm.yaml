@@ -4,6 +4,6 @@ metadata:
   name: argocd-cm
 data:
   ui.bannercontent: "Problem? Just google it mate"
-  ui.bannerurl: "www.google.com"
+  ui.bannerurl: "https://www.google.com"
   ui.bannerpermanent: "true"
   ui.bannerposition: "bottom"
