@@ -7,7 +7,9 @@ spec:
   project: default
   source:
     repoURL: https://github.com/argoproj/argo-rollouts
-    path: manifests/install.yaml
+    path: manifests
+    directory:
+      include: install.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: argo-rollouts
